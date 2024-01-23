@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def uppercase(str):
     str_cpy = ""
     for i in range(len(str)):
