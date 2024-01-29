@@ -4,6 +4,8 @@ def roman_to_int(roman_string):
                       'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     decimal = 0
     prev = 0
+    if (not isinstance(roman_string, str) or roman_string is None):
+        return None
     for i in reversed(roman_string):
         value = roman_numerals[i]
 
