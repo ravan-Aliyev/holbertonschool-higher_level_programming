@@ -11,9 +11,11 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
-    for i in range(len(text)):
-        if not text[i] == '.' and not text[i] == '?' and not text[i] == ':':
-            print(text[i], end="")
-        else:
-            print("{}\n".format(text[i]))
+
+    for c in ".:?":
+        if c in text:
+            text = text.replace(c, c + '\n\n\a')
+
+    sen_list = text.split('\a')
+    for sentence in sen_list:
+        print(sentence.strip(' '), end="")
