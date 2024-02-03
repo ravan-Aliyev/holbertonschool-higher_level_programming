@@ -30,6 +30,6 @@ class TestMaxInteger(unittest.TestCase):
         result = max_integer([-5, -4, -7, -6, -3])
         self.assertEqual(result, -3)
 
-    def test_all_negative(self):
+    def test_one_input(self):
         result = max_integer([5])
         self.assertEqual(result, 5)
