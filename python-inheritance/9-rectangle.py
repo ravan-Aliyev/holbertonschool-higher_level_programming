@@ -4,6 +4,7 @@
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """Rectangle class"""
     def __init__(self, width, height):
@@ -14,6 +15,6 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         return self.__width * self.__height
-    
+
     def __str__(self) -> str:
-        return f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
