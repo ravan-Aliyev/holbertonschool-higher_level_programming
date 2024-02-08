@@ -11,12 +11,16 @@ if __name__ == "__main__":
         .load_from_json_file
 
     file_name = "add_item.json"
-    json_data = None
+    
+    json_data = []
     with open(file_name, "a+") as file:
         file.seek(0)
         data = file.read()
         if len(data) == 0:
-            save_to_json_file([], file_name)
+            if (len(sys.argv) > 1):
+                for i in range(1, len(sys.argv)):
+                    json_data.append(sys.argv[i])
+            save_to_json_file(json_data, file_name)
         else:
             json_data = load_from_json_file("add_item.json")
             if (len(sys.argv) > 1):
