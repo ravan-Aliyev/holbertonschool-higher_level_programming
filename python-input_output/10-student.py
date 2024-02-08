@@ -13,7 +13,6 @@ class Student:
     def to_json(self, attrs=None):
         if attrs is None:
             return self.__dict__
-        
         new_dict = {}
         for i in self.__dict__:
             if i in attrs:
