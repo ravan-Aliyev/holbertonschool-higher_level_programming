@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-a = "Best School"
-b = a
-print(a == b)
+s1 = "Best School"
+s2 = "Best School"
+print(s1 == s2)
