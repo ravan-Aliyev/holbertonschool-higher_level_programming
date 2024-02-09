@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print(id(int))
+a = 89
+b = 89
+print(a is b)
