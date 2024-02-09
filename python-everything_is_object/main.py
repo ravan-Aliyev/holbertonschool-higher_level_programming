@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-a = 89
-b = a + 1
-print(a is b)
+a = "Best School"
+b = a
+print(a == b)
