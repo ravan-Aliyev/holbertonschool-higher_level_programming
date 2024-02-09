@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-l1 = [1, 2, 3]
-l2 = l1
-l1 = l1 + [4]
-print(l1)
+def increment(n):
+    a += 1
+
+a = 1
+increment(a)
+print(a)
