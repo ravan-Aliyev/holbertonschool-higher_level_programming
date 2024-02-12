@@ -30,7 +30,7 @@ class Square(Rectangle):
             for arg in args:
                 if a == 0:
                     if arg is None:
-                        self.__init__(self.width, self.x, self.y)
+                        self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
                 elif a == 1:
