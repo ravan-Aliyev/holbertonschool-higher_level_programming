@@ -112,6 +112,7 @@ class Rectangle(Base):
  - {self.__width}/{self.__height}"
 
     def to_dictionary(self):
+        """Turn class attribute to dictionary"""
         obj = {"id": self.id,
                "width": self.width,
                "height": self.height,
