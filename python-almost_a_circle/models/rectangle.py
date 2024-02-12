@@ -19,7 +19,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.__value_dimansion(value, "width")
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -28,7 +31,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__value_dimansion(value, "height")
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -37,7 +43,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__value_dimansion(value, "x")
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -46,14 +55,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__value_dimansion(value, "y")
-        self.__y = value
-
-    def __value_dimansion(self, value, name):
-        """Check validation"""
         if type(value) != int:
-            raise TypeError(f"{name} must be an integer.")
-        if (name[0] == 'x' or name[0] == 'y') and value < 0:
-            raise ValueError(f"{name} must be >= 0.")
-        elif (name[0] != 'x' and name[0] != 'y') and value <= 0:
-            raise ValueError(f"{name} must be > 0.")
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
