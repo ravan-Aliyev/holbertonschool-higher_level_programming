@@ -75,6 +75,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
+        """Update attributes"""
         if args and len(args) != 0:
             a = 0
             for arg in args:
