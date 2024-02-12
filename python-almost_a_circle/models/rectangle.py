@@ -67,9 +67,10 @@ class Rectangle(Base):
 
     def display(self):
         """Dislay rectangle"""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+
+        for i in range(0, self.__height):
+            [print(" ", end="") for j in range(0, self.__x)]
+            [print("#", end="") for k in range(0, self.__width)]
             print("")
 
     def __str__(self) -> str:
