@@ -50,6 +50,7 @@ class Rectangle(Base):
         self.__y = value
 
     def __value_dimansion(self, value, name):
+        """Check validation"""
         if type(value) != int:
             raise TypeError(f"{name} must be an integer.")
         if (name[0] == 'x' or name[0] == 'y') and value < 0:
