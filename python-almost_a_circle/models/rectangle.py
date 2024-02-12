@@ -110,3 +110,11 @@ class Rectangle(Base):
     def __str__(self) -> str:
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
  - {self.__width}/{self.__height}"
+
+    def to_dictionary(self):
+        obj = {"id": self.id,
+               "width": self.width,
+               "height": self.height,
+               "x": self.x,
+               "y": self.y}
+        return obj
