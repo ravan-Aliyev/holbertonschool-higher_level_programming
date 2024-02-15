@@ -2,6 +2,7 @@
 """Base class"""
 import json
 import os
+import turtle
 
 
 class Base:
@@ -58,3 +59,28 @@ class Base:
                 dic = cls.from_json_string(f.read())
                 data = [cls.create(**a) for a in dic]
         return data
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        for obj in list_rectangles:
+            rectangle = turtle.Turtle()
+            rectangle.color("blue")
+            rectangle.penup()
+            rectangle.goto(obj.x, obj.y)
+            rectangle.pendown()
+            for _ in range(2):
+                rectangle.forward(obj.width)
+                rectangle.left(90)
+                rectangle.forward(obj.height)
+                rectangle.left(90)
+        for obj in list_squares:
+            square = turtle.Turtle()
+            square.color("red")
+            square.penup()
+            square.goto(obj.x, obj.y)
+            square.pendown()
+            for _ in range(4):
+                square.forward(obj.size)
+                square.left(90)
+
+        turtle.done()
