@@ -48,3 +48,13 @@ class Base:
             clase = cls(dictionary["width"], dictionary["height"])
             clase.update(**dictionary)
         return clase
+
+    @classmethod
+    def load_from_file(cls):
+        file_name = f"{cls.__name__}.json"
+        data = []
+        if os.path.exists(file_name):
+            with open(file_name, "r") as f:
+                dic = cls.from_json_string(f.read())
+                data = [cls.create(**a) for a in dic]
+        return data
