@@ -10,7 +10,7 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         """This method is called before each test"""
 
-        Base._Base__np_objects = 0
+        Base._Base__nb_objects = 0
         self.base = Base()
 
     def test_init(self): 
