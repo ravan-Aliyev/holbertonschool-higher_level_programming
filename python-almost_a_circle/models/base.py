@@ -37,3 +37,14 @@ class Base:
             else:
                 list_dicts = [obj.to_dictionary() for obj in list_objs]
                 fd.write(Base.to_json_string(list_dicts))
+
+    @classmethod
+    def create(cls, **dictionary):
+        clase = {}
+        if "size" in dictionary:
+            clase = cls(dictionary["size"])
+            clase.update(**dictionary)
+        else:
+            clase = cls(dictionary["width"], dictionary["height"])
+            clase.update(**dictionary)
+        return clase
