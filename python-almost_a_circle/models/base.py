@@ -79,6 +79,7 @@ class Base:
             square.penup()
             square.goto(obj.x, obj.y)
             square.pendown()
+            square.circle(100)
             for _ in range(4):
                 square.forward(obj.size)
                 square.left(90)
