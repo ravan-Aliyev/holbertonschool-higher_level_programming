@@ -14,8 +14,8 @@ if __name__ == "__main__":
             )
 
     cursor = connection.cursor()
-    cursor.execute(f"select * from states\
-                   where name = {sys.argv[4]}")
+    cursor.execute("select * from states\
+                   where name = {}".format(sys.argv[4]))
 
     rows = cursor.fetchall()
 
