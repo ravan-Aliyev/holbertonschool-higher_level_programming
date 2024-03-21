@@ -22,7 +22,8 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
 
     for i, row in enumerate(rows):
-        print(row, end=", " if i < len(row) - 1 else "")
+        print(row[0], end=", " if i < len(rows) - 1 else "")
 
+    print()
     cursor.close()
     connection.close()
