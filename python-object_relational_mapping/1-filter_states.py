@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
     cursor.execute("select * from states\
-                    where 'N' in (select name from states)")
+                    where upper(name) like '%N'")
 
     rows = cursor.fetchall()
 
