@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
     cursor.execute("select * from states\
-                   where upper(name) like '%N' order by id")
+                   where upper(name) like binary '%N' order by id")
 
     rows = cursor.fetchall()
 
