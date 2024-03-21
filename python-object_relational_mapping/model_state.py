@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+"""SQL Alchemy model"""
+
 
 Base = declarative_base()
+
 
 class State(Base):
     __tablename__ = 'states'
