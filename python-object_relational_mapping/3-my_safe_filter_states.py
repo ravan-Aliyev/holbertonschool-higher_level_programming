@@ -13,9 +13,14 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
 
+    search = sys.argv[4]
+    user_input = search.split(' ')
+    if len(user_input) > 1:
+        search = user_input[0]
+
     cursor = connection.cursor()
     cursor.execute("select * from states\
-                   where name='{:s}' order by states.id".format(sys.argv[4]))
+                   where name='{:s}' order by states.id".format(search))
 
     rows = cursor.fetchall()
 
