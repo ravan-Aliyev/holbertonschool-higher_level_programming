@@ -13,10 +13,9 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
 
-    search = sys.argv[4].strip('\'')
     cursor = connection.cursor()
     cursor.execute(f"select * from states\
-                   where name = {search}")
+                   where name = {sys.argv[4]}")
 
     rows = cursor.fetchall()
 
