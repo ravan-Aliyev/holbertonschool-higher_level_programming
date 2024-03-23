@@ -20,7 +20,7 @@ if __name__ == "__main__":
     for state in session.query(State).order_by(State.id):
         if (sys.argv[4] == state.name):
             tmp = state.id
-    
+
     if (tmp):
         print(tmp)
     else:
